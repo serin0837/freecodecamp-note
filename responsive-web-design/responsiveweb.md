@@ -64,3 +64,51 @@ the content of each item is located in a box which is referred to as a cell
 stretch: make the content fill the whole width of the cell.(default)
 
 - align-self(Align an Item Vertically):stretch, start,center,end
+
+- justify-items: stretch, start,center,end
+  (content size shrink)
+
+- align-items:stretch, start,center,end
+- grid-template-areas:
+  "header header header"
+  "advert content content"
+  "footer footer footer";
+
+  \*\* Every word in the code represents a cell and every pair of quotation marks represent a row. In addition to custom labels, you can use a period (.) to designate an empty cell in the grid.
+
+- grid-area
+
+ex) item1{grid-area : header}
+(place an item in my custom area )
+
+- If grid doesn't have an areas template to reference,
+
+item1 { grid-area: 1/1/2/4; }
+grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+So the item will consume the rows between lines 1 and 2, and the columns between lines 1 and 4.
+
+- grid-template-columns
+- grid-template-rows
+
+repeat function
+
+ex) grid-template-rows: repeat(100, 50px);
+make 100 rows with 50px
+
+- grid-template-columns: 100px minmax(50px, 200px);
+
+two columns; the first is 100px wide, and the second has the minimum width of 50px and the maximum width of 200px.
+(when i resize i can check)
+
+- auto-fill : automatically insert as many rows or columns of your desired size as possible depending on the size of the container.
+  ex) repeat(auto-fill, minmax(60px, 1fr));
+
+- auto-fit
+  auto-fit works almost identically to auto-fill.
+
+auto-fill keeps inserting empty rows or columns and pushes your items to the side,
+while auto-fit collapses those empty rows or columns and stretches your items to fit the size of the container.
+
+- media queries
+
+- Create Grids within Grids
