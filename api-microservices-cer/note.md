@@ -124,4 +124,19 @@ example:
 
 ## 5. Serve JSON on a Specific Route
 
-this one and api together tomorrow
+- A REST (REpresentational State Transfer) API allows data exchange in a simple way, without the need for clients to know any detail about the server.
+- The client only needs to know where the resource is (the URL), and the action it wants to perform on it (the verb).
+
+- Let's create a simple API by creating a route that responds with JSON at the path /json.
+
+```js
+app.get("/json", function (req, res) {
+  res.json({ message: "Hello json" });
+});
+```
+
+## 6. Use the .env File
+
+- The .env file is a hidden file that is used to pass environment variables to your application.
+- it can be used to store data that you want to keep private or hidden.
+- The environment variables are accessible from the app as `process.env.VAR_NAME`
